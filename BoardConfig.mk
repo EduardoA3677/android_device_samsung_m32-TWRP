@@ -15,15 +15,15 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/a12
+DEVICE_PATH := device/samsung/m32
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Bootloader
 BOARD_VENDOR := samsung
-TARGET_SOC := k65v1_64_bsp_titan_rat
-TARGET_BOOTLOADER_BOARD_NAME := mt6765
+TARGET_SOC := k69v1_64_titan_marmot
+TARGET_BOOTLOADER_BOARD_NAME := mt6768
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_USES_UEFI := true
@@ -83,8 +83,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/samsung/a12
-TARGET_KERNEL_CONFIG := a12_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/m32
+TARGET_KERNEL_CONFIG := m32_defconfig
 
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
 
@@ -132,7 +132,7 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := false
 BOARD_USES_METADATA_PARTITION := true
 
 # TWRP specific build flags
-TW_DEVICE_VERSION := Edward0181-STAB
+TW_DEVICE_VERSION := EduardoA3677_1
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"

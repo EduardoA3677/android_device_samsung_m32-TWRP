@@ -30,6 +30,7 @@ subsystem sound
 /dev/ptmx                 0666   root       root
 /dev/tty                  0666   root       root
 /dev/ttyS0                0660   root       radio
+/dev/ttyMT0               0660   root       radio
 /dev/random               0666   root       root
 /dev/urandom              0666   root       root
 # Make HW RNG readable by group system to let EntropyMixer read it.
@@ -79,12 +80,5 @@ subsystem sound
 /sys/devices/platform/ssp/iio:device*    buffer/length       0660    system    system
 /sys/bus/iio/devices/iio:device*    0664   system     radio
 
-# CIQ IQI node
-/dev/ccci_ciq             0660   system     bridge_rw
-
-# S-RIL
-/dev/umts_*               0660   system      radio
-/dev/cdma_*               0660   system      radio
-
-# dev ril bridge
-/dev/drb                  0660   system      radio
+# tzic driver
+/dev/tzic             0660   system     net_bt_admin
