@@ -18,6 +18,8 @@
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
+#PRODUCT_PACKAGES += \
+#    android.hardware.fastboot@1.0-impl-mock \
+#    fastbootd
+
+$(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules,$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules)
